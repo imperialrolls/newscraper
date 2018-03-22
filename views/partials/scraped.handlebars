@@ -1,0 +1,9 @@
+<!-- SCRAPED ARTICLES ARE LISTED HERE -->
+{{#each articles}}
+<div class="col-10">
+  <a href="{{ this.link }}" target="_blank">{{ this.title }}</a>
+</div>
+<div class="col-2">
+  <button data-title="{{ this.title }}" data-link="{{ this.link }}" class="btn btn-sm btn-primary float-right save-btn">Save</button>
+</div>
+{{/each}}
