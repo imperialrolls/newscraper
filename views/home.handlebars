@@ -1,0 +1,33 @@
+<!-- NAVBAR -->
+<div class="row" id="nav-bar">
+	<div class="col-12">
+		<a href="/" id="brand">NewsTech</a>
+		<button id="scraper" class="btn btn-success btn-lg float-right">Start Scraping</button>
+		<button id="collection" data-state="{{ saved }}" class="btn btn-dark btn-lg float-right">Saved Articles</button>
+  </div>
+</div>
+
+<!-- TITLE SECTION -->
+<div class=" row" id="title-div">
+  <div class="col-12 text-center mt-5">
+  	<div id="intro">
+      <h1>NewScraper</h1>
+      <p id="main-par">Let's check out some articles from <a href="http://www.echojs.com/">echojs</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- ARTICLES ARE LISTED HERE -->
+<div id="article-container" class="row">
+  {{#unless saved}}
+    {{> scraped}}
+  {{/unless}}
+
+  {{#if saved}}
+    {{> saved}}
+  {{/if}}
+</div>
+
+
+<!-- SCRIPTS FOR THE AJAX CALLS -->
+<script src="/js/app.js"></script>
