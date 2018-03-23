@@ -42,13 +42,6 @@ $('#collection').on('click', () => {
   });
 });
 
-//When "Delete Article" button is clicked, send an ajax call to delete it
-$(document).on('click', '.delete-btn', function () {
-    //Save the id of the selected article
-    const id = $(this).attr('data-id');
-
-    console.log(`id: ${id}`);
-
     // Ajax call for the selected article
     $.ajax({
       method: 'DELETE',
